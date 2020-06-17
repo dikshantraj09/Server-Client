@@ -4,10 +4,12 @@ import time
 import sys
 
 s=socket.socket()
-host='192.168.0.107'
-port=8080
+host='192.168.0.107' #Enter the ip address of the machine you are tying to shutdown
+port=96 #Same port as in the server
 s.connect((host,port))
 print("")
 print("Connected To Server")
-command='shutdown'
+command=input("Enter the Command:")
 s.send(command.encode())
+print("Command Sent")
+
