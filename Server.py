@@ -1,3 +1,4 @@
+#Run this on the Machine you want to shutdown
 import os
 import socket
 import time
@@ -18,12 +19,12 @@ print("")
  
 command=conn.recv(1024)
 command=command.decode()
-print (command)
+print ("")
 if command == "shutdown" or command=='hibernate': 
     print("")
     print("Shutdown Command Recieved")
     os.system("shutdown /s")
-wlif command=='hibernate': 
+elif command=='hibernate': 
     print("")
     print("Hibernate Command Recieved")
     os.system("shutdown /h")  
