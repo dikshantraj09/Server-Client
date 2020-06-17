@@ -1,3 +1,4 @@
+#Run this file on the system you want to send the command from.
 import os
 import socket
 import time
